@@ -1,0 +1,3 @@
+`ActivableSwipeView` is a package which provides a workaround for an issue which appears on touchscreen devices. When the `SwipeView` contains a view with buttons then clicking the buttons is very hard since the swipe is triggered first. 
+
+Package provides the `CustomSwipeView` class (derived from the `SwipeView` class) with the added `ActivationThreshold` property. The activation threshold is a number of device-independent units, which represents a minimum distance, between a dragging initial point and a dragging current point, to activate the swipe. By using this property swipe activation can be deferred.
