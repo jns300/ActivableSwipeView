@@ -26,6 +26,7 @@ namespace ActivableSwipeView.Helper
             {
 #if ANDROID
                 handlers.AddHandler(typeof(CustomSwipeView), typeof(CustomSwipeViewHandler));
+                handlers.AddHandler<SwipeItem, ActivableSwipeView.Handlers.SwipeItemMenuItemHandler>();
 #else
                 handlers.AddHandler(typeof(CustomSwipeView), typeof(SwipeViewHandler));
 #endif

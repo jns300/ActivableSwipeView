@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ActivableSwipeViewSample.MainPage"
+             x:Class="SwipeViewActivationReproDemo.MainPage"
              xmlns:activable="clr-namespace:ActivableSwipeView.Views;assembly=ActivableSwipeView"
-             xmlns:conveters="clr-namespace:ActivableSwipeViewSample.Converters">
+             xmlns:conveters="clr-namespace:SwipeViewActivationReproDemo.Converters"
+             xmlns:viewModel="clr-namespace:SwipeViewActivationReproDemo.ViewModel"
+             x:DataType="viewModel:ItemList">
 
     <ContentPage.Resources>
         <conveters:ThresholdConverter x:Key="thresholdToText" />
@@ -20,18 +22,18 @@
         <activable:CustomSwipeView ActivationThreshold="{Binding ActivationThreshold}" Grid.Row="1">
             <activable:CustomSwipeView.LeftItems>
                 <SwipeItems>
-                    <SwipeItem Text="Previous" BackgroundColor="DarkCyan"/>
+                    <SwipeItem Text="Previous" IconImageSource="navigate_previous_gray.png" BackgroundColor="DarkCyan"/>
                 </SwipeItems>
             </activable:CustomSwipeView.LeftItems>
             <activable:CustomSwipeView.RightItems>
                 <SwipeItems>
-                    <SwipeItem Text="Next" BackgroundColor="DarkCyan"/>
+                    <SwipeItem Text="Next" IconImageSource="navigate_next_gray.png" BackgroundColor="DarkCyan"/>
                 </SwipeItems>
             </activable:CustomSwipeView.RightItems>
             <CollectionView ItemsSource="{Binding Items}" Background="Black">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <ContentView>
+                        <ContentView x:DataType="viewModel:Item">
                             <VerticalStackLayout Margin="5,10">
                                 <Button Text="Button" Command="{Binding ClickCommand}" BackgroundColor="DarkGray"/>
                                 <Label Text="{Binding ClickCountText}" HorizontalOptions="Fill" HorizontalTextAlignment="Center" TextColor="Gray"/>

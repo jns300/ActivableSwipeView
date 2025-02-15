@@ -1,6 +1,6 @@
-﻿using ActivableSwipeViewSample.ViewModel;
+﻿using SwipeViewActivationReproDemo.ViewModel;
 
-namespace ActivableSwipeViewSample
+namespace SwipeViewActivationReproDemo
 {
     public partial class MainPage : ContentPage
     {

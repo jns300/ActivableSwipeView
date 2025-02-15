@@ -34,5 +34,14 @@ namespace ActivableSwipeView.Helper
 
             return services;
         }
+        public static T GetRequiredService<T>(this IElementHandler handler)
+            where T : notnull
+        {
+            var services = handler.GetServiceProvider();
+
+            var service = services.GetRequiredService<T>();
+
+            return service;
+        }
     }
 }

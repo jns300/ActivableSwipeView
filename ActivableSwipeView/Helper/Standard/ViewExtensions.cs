@@ -1,3 +1,4 @@
+using Microsoft.Maui.Controls.PlatformConfiguration;
 using System.Threading.Tasks;
 
 namespace ActivableSwipeView.Helper
@@ -71,12 +72,17 @@ namespace ActivableSwipeView.Helper
 
 		internal static Microsoft.Maui.Graphics.Rect GetBoundingBox(this IView view) => view.Frame;
 
-		internal static object? GetParent(this object? view)
-		{
-			return null;
-		}
+        internal static Element? GetParent(this View? view)
+        {
+            return view?.Parent;
+        }
 
-		internal static IWindow? GetHostedWindow(this IView? view)
+        internal static Element? GetParent(this Element? view)
+        {
+            return view?.Parent;
+        }
+
+        internal static IWindow? GetHostedWindow(this IView? view)
 			=> null;
 
 		public static void UpdateInputTransparent(this object nativeView, IViewHandler handler, IView view) { }

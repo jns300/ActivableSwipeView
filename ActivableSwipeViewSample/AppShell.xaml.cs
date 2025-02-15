@@ -1,4 +1,4 @@
-﻿namespace ActivableSwipeViewSample
+﻿namespace SwipeViewActivationReproDemo
 {
     public partial class AppShell : Shell
     {

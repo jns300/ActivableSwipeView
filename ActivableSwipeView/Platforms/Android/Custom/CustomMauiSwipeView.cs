@@ -17,7 +17,7 @@ using AWebView = Android.Webkit.WebView;
 using SDebug = System.Diagnostics.Debug;
 using Microsoft.Maui.Platform;
 using Platform.MinorHelper;
-using SwipeViewExtensions = Platform.MinorHelper.SwipeViewExtensions;
+using SwipeViewExtensions = ActivableSwipeView.Helper.SwipeViewExtensions;
 using ISwipeItem = Microsoft.Maui.ISwipeItem;
 
 namespace ActivableSwipeView.Views
@@ -132,7 +132,7 @@ namespace ActivableSwipeView.Views
         {
             double swipeActivationThreshold = (Element as ActivableSwipeView.Views.CustomSwipeView)?.ActivationThreshold ?? 0d;
             if (swipeActivationThreshold <= 0d || _initialPoint == null) return true;
-            return Helper.SwipeActivationHelper.CheckActivationThreshold(new Point(_initialPoint.X, _initialPoint.Y), 
+            return Helper.SwipeActivationHelper.CheckActivationThreshold(new Point(_initialPoint.X, _initialPoint.Y),
                 new Point(point.X, point.Y), direction, swipeActivationThreshold);
         }
 

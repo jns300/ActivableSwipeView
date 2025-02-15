@@ -17,7 +17,7 @@ namespace Platform.MinorHelper
 
         public bool EnableGesture { get; set; } = true;
 
-        public override bool OnInterceptTouchEvent(MotionEvent ev)
+        public override bool OnInterceptTouchEvent(MotionEvent? ev)
         {
             // Same as:
             // if (!EnableGesture) return false;
@@ -25,7 +25,7 @@ namespace Platform.MinorHelper
             return EnableGesture && base.OnInterceptTouchEvent(ev);
         }
 
-        public override bool OnTouchEvent(MotionEvent e)
+        public override bool OnTouchEvent(MotionEvent? e)
         {
             return EnableGesture && base.OnTouchEvent(e);
         }

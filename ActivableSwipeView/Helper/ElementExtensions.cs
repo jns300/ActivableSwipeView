@@ -28,6 +28,7 @@ using PlatformWindow = System.Object;
 using PlatformApplication = System.Object;
 #endif
 using Microsoft.Maui.Platform;
+#nullable disable
 
 namespace ActivableSwipeView.Helper
 {

@@ -20,6 +20,7 @@ using Platform.MinorHelper;
 
 namespace ActivableSwipeView.Helper
 {
+#pragma warning disable CS8600, CS8603, CS8604
     internal static class ContextExtensions
     {
         // Caching this display density here means that all pixel calculations are going to be based on the density
@@ -182,6 +183,13 @@ namespace ActivableSwipeView.Helper
             }
         }
 
+		//public static bool TryResolveAttribute(this Context context, int id, out float? value) =>
+		//	context.Theme.TryResolveAttribute(id, out value);
+
+		//public static bool TryResolveAttribute(this Context context, int id)
+		//{
+		//	return context.Theme.TryResolveAttribute(id);
+		//}
 
         internal static int GetThemeAttrColor(this Context context, int attr)
         {
@@ -347,8 +355,12 @@ namespace ActivableSwipeView.Helper
 
             return _navigationBarHeight ?? 0;
         }
-        public static float GetDisplayDensity(this Context context) =>
-            context?.Resources?.DisplayMetrics?.Density ?? 1.0f;
+        public static float GetDisplayDensity(this Context? context)
+        {
+            EnsureMetrics(context);
+
+            return s_displayDensity;
+        }
 
         public static Rect ToCrossPlatformRectInReferenceFrame(this Context context, int left, int top, int right, int bottom)
         {
@@ -393,3 +405,4 @@ namespace ActivableSwipeView.Helper
         }
     }
 }
+#pragma warning restore CS8600, CS8603, CS8604

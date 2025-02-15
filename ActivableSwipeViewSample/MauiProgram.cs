@@ -1,7 +1,7 @@
 ﻿using ActivableSwipeView.Helper;
 using Microsoft.Extensions.Logging;
 
-namespace ActivableSwipeViewSample
+namespace SwipeViewActivationReproDemo
 {
     public static class MauiProgram
     {

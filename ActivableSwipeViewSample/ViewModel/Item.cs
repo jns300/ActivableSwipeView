@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ActivableSwipeViewSample.ViewModel
+namespace SwipeViewActivationReproDemo.ViewModel
 {
     internal class Item : INotifyPropertyChanged
     {

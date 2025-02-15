@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace ActivableSwipeViewSample
+namespace SwipeViewActivationReproDemo
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

@@ -18,7 +18,7 @@ namespace ActivableSwipeView.Helper
         internal static Size LayoutVirtualView(
             this IPlatformViewHandler viewHandler,
             int l, int t, int r, int b,
-            Func<Rect, Size> arrangeFunc = null)
+            Func<Rect, Size>? arrangeFunc = null)
         {
             var context = viewHandler.MauiContext?.Context;
             var virtualView = viewHandler.VirtualView;
@@ -41,7 +41,7 @@ namespace ActivableSwipeView.Helper
             this IPlatformViewHandler viewHandler,
             int widthMeasureSpec,
             int heightMeasureSpec,
-            Func<double, double, Size> measureFunc = null)
+            Func<double, double, Size>? measureFunc = null)
         {
             var context = viewHandler.MauiContext?.Context;
             var virtualView = viewHandler.VirtualView;

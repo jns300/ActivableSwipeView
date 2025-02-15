@@ -1,0 +1,9 @@
+{
+  "solution": {
+    "path": "ActivableSwipeView.Dev.sln",
+    "projects": [
+      "ActivableSwipeViewSample\\ActivableSwipeViewSample.csproj",
+      "ActivableSwipeView\\ActivableSwipeView.csproj"
+    ]
+  }
+}

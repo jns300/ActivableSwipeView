@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Maui.Media;
 using System.IO;
 using System.Collections.Generic;
+using Platform.MinorHelper;
 
 #if (NETSTANDARD || !PLATFORM) || (NET6_0_OR_GREATER && !IOS && !ANDROID)
 using IPlatformViewHandler = Microsoft.Maui.IViewHandler;
@@ -28,7 +29,7 @@ using ParentView = System.Object;
 
 namespace ActivableSwipeView.Helper
 {
-    /// <include file="../../docs/Microsoft.Maui/ViewExtensions.xml" path="Type[@FullName='Microsoft.Maui.ViewExtensions']/Docs/*" />
+    
     internal static partial class ViewExtensions
 	{
 		internal static Vector3 ExtractPosition(this Matrix4x4 matrix) => matrix.Translation;

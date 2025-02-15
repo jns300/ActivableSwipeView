@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ActivableSwipeViewSample.Converters
+namespace SwipeViewActivationReproDemo.Converters
 {
     public class ThresholdConverter : IValueConverter
     {

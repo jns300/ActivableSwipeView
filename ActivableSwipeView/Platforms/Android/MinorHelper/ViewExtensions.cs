@@ -29,6 +29,7 @@ using PlatformView = System.Object;
 using ParentView = System.Object;
 #endif
 using Microsoft.Maui.Platform;
+#nullable disable
 
 namespace Platform.MinorHelper
 {

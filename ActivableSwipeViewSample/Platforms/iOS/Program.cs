@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace ActivableSwipeViewSample
+namespace SwipeViewActivationReproDemo
 {
     public class Program
     {
